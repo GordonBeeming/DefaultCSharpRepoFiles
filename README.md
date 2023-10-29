@@ -18,7 +18,9 @@ Template Name                Short Name          Language  Tags
 Default C# Repository Files  gb-defaults-csharp  [C#]      .NET/CSharp/git/editorconfig
 ```
 
-and now to use the files in your repository, simple run
+## Using the template
+
+Once installed, you can easily use the files by using the following command:
 
 ```bash
 dotnet new gb-defaults-csharp
@@ -26,6 +28,16 @@ dotnet new gb-defaults-csharp
 
 If you have any of the files already, you'll need to run the command with a `--force` argument.
 
-## Updating files
+## Checking for template updates only
+
+If you already have the template installed you can run the following command to see if there is an update available
+
+```bash
+dotnet new update --check-only
+```
+
+To update all templates, remove the `--check-only` argument, to update this template only, run the install command again.
+
+## Updating files to be included in the template
 
 Updating files is simple... just add them and they should be published as `DefaultCSharpRepoFiles.nuspec` includes all files off the repository root.
