@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+
+    <id>GordonBeeming.DefaultFiles.CSharp</id>
+    <version>0.0.1</version>
+    <title>Default C# Repository Files</title>
+    <authors>Gordon-Beeming</authors>
+    <description>Default files to be added to each C# repository</description>
+    <summary>
+      A couple of files that Gordon Beeming generally adds to each repository I create containing C# code
+    </summary>
+    <releaseNotes>
+    </releaseNotes>
+
+    <projectUrl>https://github.com/GordonBeeming/DefaultCSharpRepoFiles</projectUrl>
+    <repository type="git" url="https://github.com/GordonBeeming/DefaultCSharpRepoFiles.git" branch="main" />
+
+    <license type="expression">MIT</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>item template csharp dotnet</tags>
+    <icon>icon.png</icon>
+    <readme>README.md</readme>
+
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+
+  </metadata>
+
+  <files>
+    <file src=".template.config\icon.png" target="" />
+    <file src="README.md" />
+    <file src=".\**" target="content" exclude="**\bin\**;**\obj\**;**\.vs\**;**\.vscode\**;**\.git\**;**\.github\**;**\LICENSE;" />
+  </files>
+
+</package>

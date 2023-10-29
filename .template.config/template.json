@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/template.json",
+  "author": "Gordon-Beeming",
+  "classifications": [
+    ".NET",
+    "CSharp",
+    "git",
+    "editorconfig"
+  ],
+  "name": "Default C# Repository Files",
+  "description":  "Adds default files to a repository (for C# projects)",
+  "identity": "GordonBeeming.DefaultFiles.CSharp",
+  "groupIdentity": "GordonBeeming.DefaultFiles",
+  "shortName": "gb-defaults-csharp",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "preferNameDirectory": false,
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        "README.md",
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        ".template.config/**/*",
+        ".vs/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json",
+        "**/.git/**",
+        "*.nuspec",
+        "**/node_modules/**"
+      ]
+    }
+  ]
+}
