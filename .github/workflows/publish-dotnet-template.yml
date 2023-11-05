@@ -1,0 +1,27 @@
+name: Publish .NET Template
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: nuget/setup-nuget@v1
+        with:
+          nuget-version: '6.x'
+
+      - name: Get version number
+        id: version
+        run: echo "::set-output name=version::$(date +'%Y.%m.%d').$GITHUB_RUN_NUMBER"
+
+      - name: Create package
+        run: nuget pack DefaultCSharpRepoFiles.nuspec -NoDefaultExcludes -version ${{ steps.version.outputs.version }}
+        
+      - name: Publish package
+        run: nuget push *.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}} 
+        
