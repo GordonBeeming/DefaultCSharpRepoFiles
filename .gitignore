@@ -238,3 +238,5 @@ package-lock.json
 **/.vscode/**
 package/
 *.vsix
+.DS_Store
+.idea
