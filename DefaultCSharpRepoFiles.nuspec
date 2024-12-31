@@ -31,7 +31,7 @@
   <files>
     <file src=".template.config\icon.png" target="" />
     <file src="README.md" />
-    <file src=".template.config\**" target="content" />
+    <file src=".template.config\**" target="content\.template.config\" />
     <file src="content\**" target="content" />
   </files>
 
